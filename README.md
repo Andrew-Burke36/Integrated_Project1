@@ -1,1 +1,1 @@
-# Integraded_Project1
+# Integrated_Project1
