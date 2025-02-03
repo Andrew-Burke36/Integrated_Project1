@@ -11,7 +11,7 @@
     </head>
         <body>
             <header>
-                <nav class="navbar navbar-expand-lg bg-light">
+                <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid">
                       <a class="navbar-brand" href="index.html"><img class="logo" src="images/logo/company_logo.png" alt="Acoustica"></a>
                       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,55 +51,76 @@
             <main>
                 <section>
                     <!-- Main body content -->
+                     
+                    <!-- Filter buttons-->
+                    <div class="filter-container">
+                      <div class="filter-options">
+                        <button data-name="all" class="filter-button active">All</button>
+                        <button data-name="acoustic" class="filter-button">Acoustic</button>
+                        <button data-name="electric" class="filter-button">Electric</button>
+                        <button data-name="special" class="filter-button">Special</button>
+                      </div>
+                    </div>
 
-                    
+                     <!-- Top selling guitars-->
+                     <h1 class="top-sellers">TOP SELLERS</h1>
 
-                    <h1 class="top-sellers">TOP SELLERS</h1>
-
-                    <!-- Cards showing the guitars -->
+                    <!-- Card content items for guitar catalogue -->
                     <div class="items">
                       <div class="row row-cols-1 row-cols-md-4 g-4">
-                        <div class="col ">
-                          <div class="card">
-                            <img src="images/content/acousticguitar_1.webp" class="card-img-top" alt="...">
+                        <div class="col">
+                          <div class="card" data-name="acoustic">
+                            <img src="images/content/acousticguitar_1.webp" class="card-img-top" alt="Alhambra W-1 Acoustic Guitar Special Edition">
                             <div class="card-body">
-                              <h5 class="card-title">Alhambra W-1 Acoustic Guitar</h5>
+                              <h5 class="card-title">Alhambra W-1 Acoustic Guitar Special Edition</h5>
                               <p class="card-text">$914</p>
+                              <a href="#" class="btn btn-primary">View</a>
                             </div>
                           </div>
                         </div>
+
                         <div class="col">
-                          <div class="card">
-                            <img src="images/content/acousticguitar_2.webp" class="card-img-top" alt="...">
+                          <div class="card" data-name="acoustic">
+                            <img src="images/content/acousticguitar_2.webp" class="card-img-top" alt="Deluxe OM Sitka Spruce Indian Rosewood">
                             <div class="card-body">
                               <h5 class="card-title">Deluxe OM Sitka Spruce Indian Rosewood</h5>
                               <p class="card-text">$827</p>
+                              <a href="#" class="btn btn-primary">View</a>
                             </div>
                           </div>
                         </div>
+
                         <div class="col">
-                          <div class="card">
-                            <img src="images/content/acousticguitar_3.webp" class="card-img-top" alt="...">
+                          <div class="card" data-name="acoustic">
+                            <img src="images/content/acousticguitar_3.webp" class="card-img-top" alt="Deep MJ Sinker Red Cedar Flamed Walnut -">
                             <div class="card-body">
                               <h5 class="card-title">Deep MJ Sinker Red Cedar Flamed Walnut -</h5>
                               <p class="card-text">$4,838</p>
+                              <a href="#" class="btn btn-primary">View</a>
                             </div>
                           </div>
                         </div>
+
                         <div class="col">
-                          <div class="card">
-                            <img src="images/content/electricguitar_4.webp" class="card-img-top" alt="...">
+                          <div class="card" data-name="electric">
+                            <img src="images/content/electricguitar_4.webp" class="card-img-top" alt="Farida Electric Guitars F5020 Metallic">
                             <div class="card-body">
-                              <h5 class="card-title">Farida Electric Guitars F5020 Metallic White</h5>
+                              <h5 class="card-title">Farida Electric Guitars F5020 Metallic</h5>
                               <p class="card-text">$406</p>
+                              <a href="#" class="btn btn-primary">View</a>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
+
+                    <h1 class="top-sellers">Acoustic Guitars</h1>
+
+                    <h1 class="top-sellers">Electric Guitars</h1>
                 </section>
             </main>
             
+            <!-- Footer bar -->
             <footer>
               <div class="footer-container">
                 <div class="footer-heading footer-1">
@@ -135,7 +156,7 @@
               </div>
 
             </footer>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+            <script src="script.js"></script>
         </body>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        <script src="script/script.js"></script>
 </html>
