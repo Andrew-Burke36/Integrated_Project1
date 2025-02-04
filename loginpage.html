@@ -32,7 +32,7 @@
                     <a class="nav-link" href="aboutus.html">Contact Us</a>
                   </li>
                   <li class="nav-item">
-                    <a href="signup.html"><i class="fa-solid fa-user"></i></a>
+                    <i class="fa-solid fa-user"></i>
                     <i class="fa-solid fa-bag-shopping"></i>
                   </li>
               </div>
@@ -41,84 +41,23 @@
         </header>
         <main>
           <section>
-              <!-- Main body content -->
-
-              <!-- Image slider for updates-->
-              <div id="carouselExampleIndicators" class="carousel carousel-dark slide">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <div class="container d-flex justify-content-center align-items-center vh-100">
+                <div class="card p-4" style="width: 400px;">
+                    <h3 class="text-center">Login</h3>
+                    <form id="login-form">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" id="password" class="form-control" required>
+                        </div>
+                        <button type="submit" value="submit" class="btn btn-primary w-100">Login</button>
+                        <p class="text-danger mt-2" id="error-message" style="display: none;">Invalid email or password</p>
+                    </form>
                 </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <a href="shop.html"><img src="images/content/SL_CNY25_Long-Banner-Slideshow_Desktop_1350_405_1x_2700_810_2x_9473b811-2be1-4792-9373-bd51d088d1b0_2220x666_crop_top.webp" class="d-block w-100" alt="..."></a>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="...">
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-
-              <!-- Top selling guitars-->
-              <h1 class="top-sellers">TOP SELLERS</h1>
-              
-              <!-- Card content items for guitar catalogue -->
-              <div class="items">
-                <div class="row row-cols-1 row-cols-md-4 g-4">
-                  <div class="col ">
-                    <div class="card">
-                      <img src="images/content/acousticguitar_1.webp" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <span class="card-title">Alhambra W-1 Acoustic Guitar</span>
-                        <h3 class="card-text">$914.00</h3>
-                        <a href="AcousticGuitarPage.html" class="btn btn-primary">View</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="card">
-                      <img src="images/content/acousticguitar_2.webp" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <span class="card-title">Deluxe OM Sitka Spruce Indian Rosewood</span>
-                        <h3 class="card-text">$827.00</h3>
-                        <a href="#" class="btn btn-primary">View</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="card">
-                      <img src="images/content/acousticguitar_3.webp" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <span class="card-title">Deep MJ Sinker Red Cedar Flamed Walnut -</span>
-                        <h3 class="card-text">$4,838.00</p>
-                        <a href="#" class="btn btn-primary">View</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="card">
-                      <img src="images/content/electricguitar_4.webp" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <span class="card-title">Farida Electric Guitars F5020 Metallic White</span>
-                        <h3 class="card-text">$406.00</h3>
-                        <a href="#" class="btn btn-primary">View</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            </div>
           </section>
         </main>
         
@@ -165,7 +104,7 @@
           <div class="copyright mt-5">
             <div class="row container mx-auto">
               <div class="col-lg-3 col-md-6 col-12">
-                <img src="images/payment.png" alt="">
+                <img src="images/payment.png" alt="payment options, VISA, Mastercard, Paypal">
               </div>
 
               <div class="col-lg-3 col-md-6 col-12 text-nowrap">
