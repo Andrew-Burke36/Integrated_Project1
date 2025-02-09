@@ -1,3 +1,6 @@
+// savesa the user id first
+const userID = localStorage.getItem('userId');
+
 // displays items into the checkout cart yippety yappety
 async function displayProducts() {
   const cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -20,7 +23,65 @@ async function displayProducts() {
   });
 }
 
-// update the order sumamry stuff in checkout page
+async function checkUser(userID) {
+  const apiKey = '67a1bf53c5f8d4c695e4d4f7';
+  const databaseUrl = `https://integratedproject-feca.restdb.io/rest/customerinfo/${userID}`;
+  
+  try {
+    const response = await fetch(databaseUrl, {
+      method: 'GET',
+      headers: {
+        'x-apikey': apiKey,
+        'Content-Type': 'application/json'
+      }
+    });
+
+    const data = await response.json();
+    UUID = data._id;
+    
+    if ( UUID === userID) {
+      return data; 
+    } else {
+      console.log('user not found')
+    }
+  } catch (error) {
+    console.error('Error fetching user data:', error);
+    return null;
+  }
+}
+
+async function autoFill() {
+  if (userID) {
+    const userData = await checkUser(userID);
+    if (userData) {
+      // if user data exists fill the form
+      document.getElementById('fullname').value = userData.name;
+      document.getElementById('email').value = userData.email;
+      document.getElementById('streetaddress').value = userData.street;
+      document.getElementById('cityaddress').value = userData.city;
+      document.getElementById('postalcode').value = userData.postal;
+      document.getElementById('number').value = userData.phone;
+      document.getElementById('creditcard').value = userData.card;
+      document.getElementById('expirationdate').value = userData.month;
+      document.getElementById('cvv').value = userData.cvv;
+      document.getElementById('cardholder').value = userData.name;
+    } else { 
+      // keep the text input empty if there is no data
+      document.getElementById('fullname').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('streetaddress').value = '';
+      document.getElementById('cityaddress').value = '';
+      document.getElementById('postalcode').value = '';
+      document.getElementById('number').value = '';
+      document.getElementById('creditcard').value = '';
+      document.getElementById('expirationdate').value = '';
+      document.getElementById('cvv').value = '';
+      document.getElementById('cardholder').value = '';
+    }
+  }
+}
+
+// update the order summary stuff in checkout page
 function updateOrderSummary() {
   const cart = JSON.parse(localStorage.getItem('cart')) || [];
   let subtotal = 0;
@@ -40,18 +101,53 @@ function updateOrderSummary() {
 }
 
 // Handling form submission
-document.querySelector('#checkout-form').addEventListener('submit', function (event) {
+document.querySelector('#checkout-form').addEventListener('submit', async function (event) {
   event.preventDefault();
 
-  // Clears the cart
-  localStorage.removeItem('cart');
-  updateCartUI();
-  updateOrderSummary();
-  window.location.href = 'index.html'; // Redirect to the homepage
+  // pushes the order to the database
+  const apiKey = '67a1bf53c5f8d4c695e4d4f7';
+  const customerOrderDB = `https://integratedproject-feca.restdb.io/rest/orderhistory`;
+  const cart = JSON.parse(localStorage.getItem('cart'));
+  const date = new Date().toISOString();
+  const orderNumber = Math.floor(Math.random() * 9000) + 1000;
+  const productID = cart[0].id;
+  const quantity = cart[0].quantity;
+
+
+  const orderDetails = {
+    userID: userID,
+    productID: productID,
+    quantity: quantity,
+    orderDate: date,
+    orderNumber: orderNumber,
+  };
+
+  try {
+    const response = await fetch(customerOrderDB, {
+      method: 'POST',
+      headers: {
+        'x-apikey': apiKey,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(orderDetails),
+    });
+
+    if (response.ok) {
+      console.log('Order placed successfully!');
+    }
+
+    // Clears the cart
+    localStorage.removeItem('cart');
+    updateOrderSummary();
+    window.location.href = 'index.html'; // Redirect to the homepage
+  } catch (error) {
+    console.error('Error placing order:', error);
+  }
 });
 
 // initialize the page only once the dom loads
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+  await autoFill();
   displayProducts(); // display products in the checkout cart
-  updateOrderSummary(); // initialize for oder summary
+  updateOrderSummary(); // initialize for order summary
 });

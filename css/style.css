@@ -1,0 +1,321 @@
+@import url('https://fonts.googleleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+/*Navigation bar */
+header {
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.4);
+}
+
+.navbar {
+    background-color: lightyellow;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px; 
+}
+
+.navbar .logo {
+    margin-left: 1.1rem;
+}
+
+.nav-item {
+    padding: 0 18px;
+}
+
+.nav-item a, .nav-item a i {
+    color: black;
+    transition: 0.3s ease;
+}
+
+
+.navbar i {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.navbar i:hover {
+    color: #c2a855;
+}
+
+.nav-item .nav-link:hover {
+    color: #c2a855;
+}
+
+/* Main content */
+
+.top-sellers {
+    font-size: 50px;
+    font-weight: bold;
+    padding: 30px 50px 0px;
+    color: #c2a855;
+    font-family: "Montserrat", sans-serif;
+}
+
+a .logo {
+    display: flex;
+    width: 200px;
+    height: 100%;
+}
+
+
+.logo img {
+    text-decoration: none;
+    width: 250px;
+    height: 100%;
+}
+
+.items {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 50px;
+}
+
+.items .btn {
+    background-color: #c2a855;
+    border: none;
+}
+
+.items .btn:hover {
+    background-color: #9F8A46;
+}
+
+/* Settings page */
+.list-group .list-group-item.active {
+    background-color: #c2a855;
+    border: none;
+}
+
+.navigation-bar {
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
+
+.tab-content button {
+    background-color: #c2a855;
+    border: none;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.list-group a i {
+    font-size: 1.4rem;
+    
+}
+
+.tab-content .btn-primary:hover {
+    background-color: #c2a855;
+    transform: scale(1.05);
+}
+
+.tab-content button:active {
+    background-color: black;
+}
+
+/* Cart sidemenu overlay */
+.offcanvas .offcanvas-header {
+    background-color: #9F8A46;
+    color: white;
+}
+
+.offcanvas .offcanvas-footer .btn {
+    box-shadow: 0px 0px 16px rgba(0,0,0,0.3);
+}
+
+.offcanvas-body, .offcanvas .offcanvas-footer {
+    background-color: lightyellow;
+}
+
+.badge {
+    margin-left: 10px;
+}
+
+/* Checkout button/checkout */
+#checkoutBtn {
+    background-color: #c2a855;
+    border: none;
+    font-size: 18px;
+    
+}
+
+.cart-item-img {
+    border: black 1px solid;
+    border-radius: 8px;
+}
+
+/* shop page*/
+.shop-img img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 4px 16px rgba(0,0,0,0.3);
+}
+
+.filterbtns .btn-primary {
+    background-color: #fff;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.filterbtns .btn-primary:hover {
+    background-color: #c2a855;
+}
+
+.filterbtns .btn-primary:active {
+    background-color: #9F8A46;
+}
+
+.underline {
+    height: 3px;
+    width: 175px;
+    background-color: #c2a855;
+}
+
+.product-img {
+    width: 100%;
+    height: 250px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+.product-img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    min-height: 550px;
+    overflow: hidden;
+    border: 2px solid whitesmoke;
+    border-radius: 16px;
+    position: relative;
+    padding: 1.5rem 1.5rem;
+    box-shadow: 0px 4px 16px rgba(0,0,0,0.3);
+}
+.product-content span {
+    flex-shrink: 0;
+}
+
+.view-product {
+    margin-top: auto;
+}
+
+.product-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+}
+
+/* Logout and profile button */
+
+#profile-link, #logout-link {
+    display: none;
+}
+
+/* Footer */
+footer {
+    background-color: lightyellow;
+}
+
+footer h5 {
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+footer li {
+    padding-bottom: 16px;
+}
+
+footer li a {
+    text-decoration: none;
+    color: black;
+    transition: 0.3s ease;
+}
+
+footer li a:hover {
+    color: #c2a855;    
+}
+
+footer .socials a {
+    color: black;
+    font-size: 1.7rem;
+    padding-right: 10px;
+    margin-bottom: 50px;
+}
+
+footer .socials i {
+    transition: all 0.3s ease;
+}
+
+footer .socials i:hover {
+    transform: scale(1.2);
+}   
+
+footer .brand-logo {
+    max-height: 75px;
+    width: auto;
+}
+
+/* Checkout page */
+.companylogo {
+    max-width: 50px;
+    height: auto;
+}
+
+.checkout-header {
+    color: #c2a855;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1150px) {
+    .footer-container {
+        height: 50vh;
+    }
+
+    .footer-email-form {
+        margin-top: 4rem;
+    }
+
+    .top-sellers {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .footer {
+        padding-top: 2rem;
+    }
+
+    .top-sellers {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .footer-3 {
+        display: none;
+    }
+
+}
+

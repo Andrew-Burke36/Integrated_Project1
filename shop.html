@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="images/logo/company_logo.png" type="image/x-icon">
         <title>Acoustica</title>
         <link rel="stylesheet" href="css/styles/normalize.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -34,8 +35,10 @@
                     <li class="nav-item dropdown">
                       <a href="" class="nav-link" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-user"></i></a>
                       <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="signup.html">Signup</a></li>
-                        <li><a class="dropdown-item" href="loginpage.html">Login</a></li>
+                        <li><a class="dropdown-item" href="signup.html" id="signup-link">Signup</a></li>
+                        <li><a class="dropdown-item" href="loginpage.html" id="login-link">Login</a></li>
+                        <li><a class="dropdown-item" href="profile.html" id="profile-link">Settings</a></li>
+                        <li><a class="dropdown-item" id="logout-link">Logout</a></li>
                       </ul>
                     </li>
                     <li class="nav-item shopping-cart">
@@ -121,9 +124,7 @@
                           </div>
                           <div class="modal-footer justify-content-center">
                               <!-- Add to Cart Button -->
-                              <button type="button" class="btn btn-primary active" id="modalAddToCartBtn">Add to Cart</button>
-                              <!-- Buy Button -->
-                              <a href="checkout.html" class="btn btn-primary" id="buynowBtn">Buy Now</a>
+                              <button type="button" class="btn btn-warning active" id="modalAddToCartBtn">Add to Cart</button>
                           </div>
                       </div>
                   </div>
@@ -169,7 +170,7 @@
                 <div class="footer-one col-lg-3 col-md-6 col-12">
                   <h5 class="pb-2">About Us</h5>
                   <div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>Acoustica blends acoustic artistry with modern performance, creating innovative instruments that empower musicians. From a small studio to a global brand, we are committed to excellence, perseverance, and helping musicians tell their stories.</p>
                   </div>
                   <h5 class="pb-2 py-3">Socials</h5>
                   <div class="socials">
@@ -196,5 +197,6 @@
           <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
           <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
           <script src="js/script.js"></script>
+          <script src="js/usersessionhandler.js"></script>
         </body>
 </html>

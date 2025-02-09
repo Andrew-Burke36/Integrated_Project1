@@ -4,6 +4,7 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="Viewport" content="width=device-width, initial-scale=1">
+      <link rel="shortcut icon" href="images/logo/company_logo.png" type="image/x-icon">
       <title>Acoustica</title>
       <link rel="stylesheet" href="css/styles/normalize.css">
       <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -37,8 +38,8 @@
                   <ul class="dropdown-menu dropdown-menu-end">
                     <li><a class="dropdown-item" href="signup.html" id="signup-link">Signup</a></li>
                     <li><a class="dropdown-item" href="loginpage.html" id="login-link">Login</a></li>
-                    <li><a class="dropdown-item" href="profile.html" id="profile-link">Profile</a></li>
-                    <li><a class="dropdown-item" href="logout.html" id="logout-link">Logout</a></li>
+                    <li><a class="dropdown-item" href="profile.html" id="profile-link">Settings</a></li>
+                    <li><a class="dropdown-item" id="logout-link">Logout</a></li>
                   </ul>
                 </li>
                 <li class="nav-item">
@@ -49,29 +50,29 @@
           </div>
         </nav>
       </header>
+
+      <!--Main body content-->
       <main>
-        <section>
-          <!-- Offcanvas Shopping Cart -->
-          <div class="offcanvas offcanvas-end" tabindex="1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasRightLabel">Shopping Cart</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <!-- Cart items will be injected dynamically -->
-              <div class="cart-container"></div>
-            </div>
-            <div class="d-flex justify-content-center p-3 offcanvas-footer">
-              <button id="checkoutBtn" class="btn btn-success mt-3" style="width: 100%; max-width: 300px;">
-                Proceed to Checkout
-              </button>
-            </div>
+        <!-- Offcanvas Shopping Cart -->
+        <div class="offcanvas offcanvas-end" tabindex="1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Shopping Cart</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
+          <div class="offcanvas-body">
+            <!-- Cart items will be injected dynamically -->
+            <div class="cart-container"></div>
+          </div>
+          <div class="d-flex justify-content-center p-3 offcanvas-footer">
+            <a href="checkout.html" id="checkoutBtn" class="btn btn-success mt-3" style="width: 100%; max-width: 300px;">
+                  Proceed to Checkout
+                </a>
+          </div>
+        </div>
 
-          <!-- Main body content -->
-
-          <!-- Image slider for updates-->
-          <div id="carouselExampleIndicators" class="carousel carousel-dark slide">
+        <!-- Image slider for updates-->
+        <section>
+          <div id="carouselExampleIndicators" class="carousel carousel-dark slide mb-">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -79,13 +80,13 @@
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
+                <a href="shop.html"><img src="images/content/homepage_sliderimg.webp" class="d-block w-100" alt="Heritage Guitar inc now in stock ascent+ collection shop now"></a>
+              </div>
+              <div class="carousel-item">
                 <a href="shop.html"><img src="images/content/SL_CNY25_Long-Banner-Slideshow_Desktop_1350_405_1x_2700_810_2x_9473b811-2be1-4792-9373-bd51d088d1b0_2220x666_crop_top.webp" class="d-block w-100" alt="..."></a>
               </div>
               <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
+                <a href="shop.html"><img src="images/content/sweelee_BSTOCK_homesliderimg.webp" class="d-block w-100" alt="BSTOCK Super sale shop now"></a>
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -97,12 +98,48 @@
               <span class="visually-hidden">Next</span>
             </button>
           </div>
+        </section>
 
-          <!-- Card content items for guitar catalogue -->
+        <!-- Blog section -->
+        <section>
+          <div class="container pt-5">
+
+            <div class="row align-items-center mb-5">
+              <div class="col-md-6">
+                <h1>First in-house built guitar!</h1>
+                <p>
+                  Welcome to another Acoustica blog! Our team has been hard at work developing our very first custom made guitar, built in-house from the ground up, developed alongside talented sound engineers in the industry to compete against popular brands in the market! Stay tuned as we continue refining our guitar, once we are confident that it is ready for release, we will notify you, our loyal customers first hand so you can snatch one for yourself!
+                </p>
+              </div>
+              <div class="col-md-6">
+                <div class="sketchfab-embed-wrapper">
+                  <iframe 
+                    title="Electric Guitar" 
+                    frameborder="0" 
+                    allowfullscreen 
+                    mozallowfullscreen="true" 
+                    webkitallowfullscreen="true" 
+                    allow="autoplay; fullscreen; xr-spatial-tracking" 
+                    xr-spatial-tracking 
+                    execution-while-out-of-viewport 
+                    execution-while-not-rendered 
+                    web-share 
+                    width="640" 
+                    height="480" 
+                    src="https://sketchfab.com/models/35901aea8b3645a88d09b2d942978153/embed?autostart=1">
+                  </iframe>
+                </div>
+              </div>
+            </div>
+        </section>
+
+        <!--Product features-->
+        <!-- Card content items for guitar catalogue -->
+        <section>
           <div class="container">
             <div class="row">
-              <div class="col text-center my-4">
-                <h1 class="fs-1 fw-bold top-sellers">FEATURED</h1>
+              <div class="col text-center my-5">
+                <h1 class="top-sellers">FEATURED</h1>
                 <div class="underline mx-auto mt-3"></div>
               </div>
             </div>
@@ -151,9 +188,9 @@
                     </div>
                   </div>
                   <div class="product-content text-center py-3">
-                    <span class="d-block text-uppercase fs-5 fw-bold">Product title</span>
-                    <span class="d-block fs-5 mt-1">$00.00</span>
-                    <a href="#" class="btn btn-primary mt-2">Go somewhere</a>
+                    <span class="d-block text-uppercase fs-5 fw-bold">Harmony Foundation Series e-Terra ST GA Cutaway Acoustic Guitar, Natural Satin</span>
+                    <span class="d-block fs-5 mt-1">$379.00</span>
+                    <a href="shop.html" class="btn btn-warning mt-2 fw-semibold view-product">View</a>
                   </div>
                 </div>
               </div>
@@ -201,26 +238,70 @@
                       </div>
                     </div>
                     <div class="product-content text-center py-3">
-                      <span class="d-block text-uppercase fs-5 fw-bold">Product title</span>
-                      <span class="d-block fs-5 mt-1">$00.00</span>
-                      <a href="#" class="btn btn-primary mt-2">Go somewhere</a>
+                      <span class="d-block text-uppercase fs-5 fw-bold">Ibanez RGRB620-BKF Electric Guitar, Black Flat, Laurel FB, Mako (B-Stock)</span>
+                      <span class="d-block fs-5 mt-1">$789.00</span>
+                      <a href="shop.html" class="btn btn-warning mt-2 fw-semibold view-product">View</a>
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4 col-md-6 discounted">
+              </div>
+              <div class="row">
+                <div class="col text-center my-5">
+                  <h1 class="top-sellers">TOP SELLER</h1>
+                  <div class="underline mx-auto mt-3 mb-3"></div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6">
                   <div class="product-item">
                     <div class="product-img">
-                      <img src="images/content/acousticguitar_3.webp"  class="img-fluid d-block mx-auto" alt="electric guitar">
+                      <img src="images/content/blackelectricguitar.webp" class="img-fluid d-block mx-auto" alt="Squier Sonic Stratocaster Electric Guitar w/White Pickguard, Maple FB, Black">
                     </div>
-                    <div class="product-content text-center py-3">
-                      <span class="d-block text-uppercase fs-5 fw-bold">Product title</span>
-                      <span class="d-block fs-5 mt-1">$00.00</span>
-                      <a href="#" class="btn btn-primary mt-2">Go somewhere</a>
+                      <div class="product-content text-center py-3">
+                        <span class="d-block text-uppercase fs-5 fw-bold">Squier Sonic Stratocaster Electric Guitar w/White Pickguard, Maple FB, Black</span>
+                        <span class="d-block fs-5 mt-1">$299.00</span>
+                        <a href="shop.html" class="btn btn-warning mt-2 fw-semibold view-product">View</a>
+                      </div>
                     </div>
                   </div>
-                </div>      
-              </div>
-          </div>
+                  <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-item">
+                      <div class="product-img">
+                        <img src="images/content/franceacousticsweelee.webp" class="img-fluid d-block mx-auto" alt="Fender Buck Owens Kingman Acoustic Guitar w/Case">
+                      </div>
+                      <div class="product-content text-center py-3">
+                        <span class="d-block text-uppercase fs-5 fw-bold">Fender Buck Owens Kingman Acoustic Guitar w/Case</span>
+                        <span class="d-block fs-5 mt-1">$1099.00</span>
+                        <a href="shop.html" class="btn btn-warning mt-2 fw-semibold view-product">View</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-item">
+                      <div class="product-img">
+                        <img src="images/content/sweeleeacoustic2.webp" class="img-fluid d-block mx-auto" alt="Taylor GS Mini-E Special Edition Acoustic Guitar">
+                      </div>
+                        <div class="product-content text-center py-3">
+                          <span class="d-block text-uppercase fs-5 fw-bold">Taylor GS Mini-E Special Edition Acoustic Guitar</span>
+                          <span class="d-block fs-5 mt-1">$1279.00</span>
+                          <a href="shop.html" class="btn btn-warning mt-2 fw-semibold view-product">View</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                      <div class="product-item">
+                          <div class="product-img">
+                              <img src="images/content/redelectrieswee.webp" class="img-fluid d-block mx-auto" alt="Squier Classic Vibe 50s Stratocaster Electric Guitar">
+                          </div>
+                          <div class="product-content text-center py-3">
+                              <span class="d-block text-uppercase fs-5 fw-bold">Squier Classic Vibe 50s Stratocaster Electric Guitar</span>
+                              <span class="d-block fs-5 mt-1">$507.50</span>
+                              <a href="shop.html" class="btn btn-warning mt-2 fw-semibold view-product">View</a>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+            </div>
         </section>
       </main>
       
@@ -259,7 +340,7 @@
           <div class="footer-one col-lg-3 col-md-6 col-12">
             <h5 class="pb-2">About Us</h5>
             <div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <p>Acoustica blends acoustic artistry with modern performance, creating innovative instruments that empower musicians. From a small studio to a global brand, we are committed to excellence, perseverance, and helping musicians tell their stories.</p>
             </div>
             <h5 class="pb-2 py-3">Socials</h5>
             <div class="socials">
@@ -283,6 +364,6 @@
         </div>
       </footer>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-      <script src="js/cartloader.js"></script>
+      <script src="js/usersessionhandler.js"></script>
     </body>
 </html>
