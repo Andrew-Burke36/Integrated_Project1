@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="css/styles/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+  <body>
+    <main>
+      <!--Checkout form-->
+      <section>
+        <div class="container py-5">
+          <div class="row align-items-center mb-5">
+            <div class="col-md-6 text-start">
+              <h2 class="mb-0 checkout-header">Checkout</h2>
+            </div>
+            <div class="col-md-6 text-end">
+              <img src="images/logo/company_logo.png" alt="Company Logo" class="img-fluid companylogo">
+            </div>
+          </div>
+          <div class="row">
+            
+            <!-- Checkout form -->
+            <div class="col-md-6 scrollable">
+              <h4>Billing & Shipping</h4>
+              <form id="checkout-form">
+                <div class="row mb-3">
+                  <div class="col-md-12">
+                    <label for="name" class="form-label fw-semibold">Full name</label>
+                    <input type="text" class="form-control" id="fullname" name="fullname" placeholder="E.g. John Doe" required>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label fw-semibold">Email</label>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="E.g. JohnDoe@gmail.com" required>
+                </div>
+                <div class="mb-3">
+                  <label for="address" class="form-label fw-semibold">Street</label>
+                  <input type="text" class="form-control" id="streetaddress" name="street" placeholder="E.g. 161 Kampong Ampat #05-01" required>
+                </div>
+                <div class="mb-3">
+                  <label for="address" class="form-label fw-semibold">City</label>
+                  <input type="text" class="form-control" id="cityaddress" placeholder="E.g. Goldlion Building " name="address2" required>
+                </div>
+                <div class="mb-3">
+                  <label for="postal" class="form-label fw-semibold">Postal Code</label>
+                  <input type="text" class="form-control" id="postalcode" placeholder="E.g. Singapore" name="postalcode" required>
+                </div>
+                <div class="mb-3">
+                  <label for="number" class="form-label fw-semibold">Phone number</label>
+                  <input type="text" class="form-control" id="number" placeholder="E.g. 61111221" name="number" required>
+                </div>
+
+                <!--Payment method-->
+                <h4>Payment Method</h4>
+                <div class="container border rounded p-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="paymentMethod" id="paymentMethod1" value="method1" data-bs-toggle="collapse" data-bs-target="#collapseMethod1" aria-expanded="true" aria-controls="collapseMethod1" checked>
+                    <label class="form-check-label" for="paymentMethod1">
+                      Credit/Debit Card
+                    </label>
+                    <div id="collapseMethod1" class="collapse show mt-2">
+                      <div class="col-md-12">
+                        <input type="card" class="form-control py-2" id="creditcard" name="creditcard" placeholder="Card number" required>
+                      </div>
+                      <div class="row mb-3 my-3">
+                        <div class="col-md-6">
+                          <input type="expiration" class="form-control py-2" id="expirationdate" name="expirationdate" placeholder="MM / YY" required>
+                        </div>
+                        <div class="col-md-6">
+                          <input type="cvv" class="form-control py-2" id="cvv" name="cvv" placeholder="CVV" required>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <input type="name" class="form-control py-2" id="cardholder" name="cardholder" placeholder="Cardholder name" required>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-check mt-3">
+                    <input class="form-check-input" type="radio" name="paymentMethod" id="paymentMethod2" value="method2" data-bs-toggle="collapse" data-bs-target="#collapseMethod2" aria-expanded="false" aria-controls="collapseMethod2">
+                    <label class="form-check-label" for="paymentMethod2">
+                      PayNow
+                    </label>
+                    <div id="collapseMethod2" class="collapse mt-2">
+                      <div class="paynow d-flex justify-content-center">
+                        <img src="images/content/paynow.png" alt="PayNow" class="img-fluid">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12 d-flex align-items-end mt-3">
+                  <button type="submit" class="btn btn-warning w-100 py-2 orderBtn">Place Order</button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Order summary and product information -->
+            <div class="col-md-6 product-information">
+              <h4>Product Information</h4>
+              <div id="checkout-cart-items" class="container border rounded p-3">
+                <!-- Cart items will be dynamically inserted here -->
+              </div>
+
+              <h4 class="mt-4">Order Summary</h4>
+              <div class="container border rounded p-3">
+                <div class="row">
+                  <div class="col-md-6">Subtotal</div>
+                  <div class="col-md-6 text-end" id="subtotal-amount">$0.00</div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">Shipping</div>
+                  <div class="col-md-6 text-end" id="shipping-amount">$0.00</div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">Tax</div>
+                  <div class="col-md-6 text-end" id="tax-amount">$0.00</div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">Total</div>
+                  <div class="col-md-6 text-end" id="total-amount">$0.00</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="js/checkout.js"></script>
+  </body>
+</html>
