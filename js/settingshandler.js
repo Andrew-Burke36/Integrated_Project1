@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     saveBtn.addEventListener("click", async function (event) {
       event.preventDefault();
 
-      const userId = localStorage.getItem("userId"); // Ensure this is stored at login
+      const userId = localStorage.getItem("userId");
       if (!userId) {
         alert("User not logged in!");
         return;
@@ -154,21 +154,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-/* <tbody>
-                        <tr>
-                          <td>#1001</td>
-                          <td>Feb 1, 2025</td>
-                          <td>$199.99</td>
-                          <td><span class="badge bg-success">Delivered</span></td>
-                        </tr>
-                        <tr>
-                          <td>#1002</td>
-                          <td>Feb 5, 2025</td>
-                          <td>$299.99</td>
-                          <td><span class="badge bg-warning">Processing</span></td>
-                        </tr>
-                      </tbody> */
-
 // loads the users orders into their order history
 async function OrderHistoryretrieve() {
   const apiKey = "67a1bf53c5f8d4c695e4d4f7";
@@ -195,18 +180,23 @@ async function OrderHistoryretrieve() {
 async function OrderHistoryLoader() {
   const orderDetails = await OrderHistoryretrieve();
   const orderHistoryTable = document.querySelector('#orderHistory');
+  const usersessionID = localStorage.getItem('userId');
+  const orderuserID = orderDetails[0].userID;
 
-  orderDetails.forEach(order => {
-    const orderRow = document.createElement('tr');
-    orderRow.innerHTML = `
-      <td>#${order.orderNumber}</td>
-      <td>${order.orderDate}</td>
-      <td>${order.quantity}</td>
-      <td><span class="badge bg-warning">Processing</span></td>
-    `;
-    orderHistoryTable.appendChild(orderRow);
-    console.log(orderDetails);
-  });
+  if (orderuserID === usersessionID) {
+    orderDetails.forEach(order => {
+      const orderRow = document.createElement('tr');
+      orderRow.innerHTML = `
+        <td>#${order.orderNumber}</td>
+        <td>${order.orderDate}</td>
+        <td>${order.quantity}</td>
+        <td><span class="badge bg-warning">Processing</span></td>
+      `;
+      orderHistoryTable.appendChild(orderRow);
+    });
+  } else {
+    console.log('no orders found');
+  }
 };
 
 document.addEventListener('DOMContentLoaded', async () => {

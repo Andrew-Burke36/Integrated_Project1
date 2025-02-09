@@ -1,5 +1,7 @@
 /* Shop page */
 /* Filtering code */
+
+// Isotope API code 
 // Initialize Isotope on #product-list for filtering
 var $grid = $('#product-list').isotope({
   // options can be added if needed
@@ -32,7 +34,7 @@ async function loadProducts() {
     console.error("Error loading products:", error);
     return [];
   }
-};
+}
 
 // dynamic loading script for products in shop/anywhere else
 async function displayProducts() {
@@ -77,7 +79,7 @@ async function displayProducts() {
     bootstrapGrid.offsetHeight;
     bootstrapGrid.classList.remove('d-none');
   });
-};
+}
 
 // updates the modal when user presses view on a product
 document.addEventListener('click', function (e) {
@@ -216,7 +218,7 @@ function updateCartUI() {
       updateCartIcon();
     });
   });
-};
+}
 
 
 
@@ -236,11 +238,11 @@ function addToCart(id, name, price, image) {
   localStorage.setItem('cart', JSON.stringify(cart));
   updateCartUI();
   updateCartIcon();
-};
+}
 
 // Change quantity function
 function changeQuantity(id, amount) {
-  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const cart = JSON.parse(localStorage.getItem('cart'));
   const productIndex = cart.findIndex(item => item.id === id);
 
   if (productIndex !== -1) {
@@ -254,11 +256,11 @@ function changeQuantity(id, amount) {
     updateCartUI();
     updateCartIcon();
   }
-};
+}
 
 // Function to update cart icon
 function updateCartIcon() {
-  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const cart = JSON.parse(localStorage.getItem('cart'));
   const cartIcon = document.querySelector('.fa-bag-shopping');
   const cartItemCount = cart.reduce((total, item) => total + item.quantity, 0);
   const cartBadge = cartIcon.querySelector('.badge');

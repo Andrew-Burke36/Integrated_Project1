@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="images/logo/company_logo.png" type="image/x-icon">
   <title>Checkout</title>
   <link rel="stylesheet" href="css/styles/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -40,48 +41,48 @@
                 </div>
                 <div class="mb-3">
                   <label for="address" class="form-label fw-semibold">Street</label>
-                  <input type="text" class="form-control" id="streetaddress" name="street" placeholder="E.g. 161 Kampong Ampat #05-01" required>
+                  <input type="text" class="form-control" id="streetaddress" name="street" required>
                 </div>
                 <div class="mb-3">
                   <label for="address" class="form-label fw-semibold">City</label>
-                  <input type="text" class="form-control" id="cityaddress" placeholder="E.g. Goldlion Building " name="address2" required>
+                  <input type="text" class="form-control" id="cityaddress" name="address2" required>
                 </div>
                 <div class="mb-3">
                   <label for="postal" class="form-label fw-semibold">Postal Code</label>
-                  <input type="text" class="form-control" id="postalcode" placeholder="E.g. Singapore" name="postalcode" required>
+                  <input type="text" class="form-control" id="postalcode" name="postalcode" required>
                 </div>
                 <div class="mb-3">
                   <label for="number" class="form-label fw-semibold">Phone number</label>
-                  <input type="text" class="form-control" id="number" placeholder="E.g. 61111221" name="number" required>
+                  <input type="text" class="form-control" id="number" name="number" required>
                 </div>
 
                 <!--Payment method-->
                 <h4>Payment Method</h4>
                 <div class="container border rounded p-3">
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="paymentMethod" id="paymentMethod1" value="method1" data-bs-toggle="collapse" data-bs-target="#collapseMethod1" aria-expanded="true" aria-controls="collapseMethod1" checked>
+                    <input class="form-check-input" type="radio" name="paymentMethod" id="paymentMethod1" value="method1" data-bs-toggle="collapse" data-bs-target="#collapseMethod1" checked>
                     <label class="form-check-label" for="paymentMethod1">
                       Credit/Debit Card
                     </label>
                     <div id="collapseMethod1" class="collapse show mt-2">
                       <div class="col-md-12">
-                        <input type="card" class="form-control py-2" id="creditcard" name="creditcard" placeholder="Card number" required>
+                        <input type="text" class="form-control py-2" id="creditcard" name="creditcard" placeholder="Card number" required>
                       </div>
                       <div class="row mb-3 my-3">
                         <div class="col-md-6">
-                          <input type="expiration" class="form-control py-2" id="expirationdate" name="expirationdate" placeholder="MM / YY" required>
+                          <input type="month" class="form-control py-2" id="expirationdate" name="expirationdate" placeholder="MM / YY" required>
                         </div>
                         <div class="col-md-6">
-                          <input type="cvv" class="form-control py-2" id="cvv" name="cvv" placeholder="CVV" required>
+                          <input type="text" class="form-control py-2" id="cvv" name="cvv" placeholder="CVV" required>
                         </div>
                       </div>
                       <div class="col-md-12">
-                        <input type="name" class="form-control py-2" id="cardholder" name="cardholder" placeholder="Cardholder name" required>
+                        <input type="text" class="form-control py-2" id="cardholder" name="cardholder" placeholder="Cardholder name" required>
                       </div>
                     </div>
                   </div>
                   <div class="form-check mt-3">
-                    <input class="form-check-input" type="radio" name="paymentMethod" id="paymentMethod2" value="method2" data-bs-toggle="collapse" data-bs-target="#collapseMethod2" aria-expanded="false" aria-controls="collapseMethod2">
+                    <input class="form-check-input" type="radio" name="paymentMethod" id="paymentMethod2" value="method2" data-bs-toggle="collapse" data-bs-target="#collapseMethod2">
                     <label class="form-check-label" for="paymentMethod2">
                       PayNow
                     </label>

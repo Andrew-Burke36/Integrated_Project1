@@ -37,7 +37,7 @@ async function checkUser(userID) {
     });
 
     const data = await response.json();
-    UUID = data._id;
+    const UUID = data._id;
     
     if ( UUID === userID) {
       return data; 
@@ -90,7 +90,7 @@ function updateOrderSummary() {
   });
 
   const shipping = 5.00;  // shipping fee
-  const tax = (subtotal * 0.09);  // 9% tax
+  const tax = (subtotal * 0.09);  // 9% tax uh ohh
 
   const total = subtotal + shipping + tax;
 
@@ -107,7 +107,7 @@ document.querySelector('#checkout-form').addEventListener('submit', async functi
   // pushes the order to the database
   const apiKey = '67a1bf53c5f8d4c695e4d4f7';
   const customerOrderDB = `https://integratedproject-feca.restdb.io/rest/orderhistory`;
-  const cart = JSON.parse(localStorage.getItem('cart'));
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
   const date = new Date().toISOString();
   const orderNumber = Math.floor(Math.random() * 9000) + 1000;
   const productID = cart[0].id;
@@ -133,12 +133,11 @@ document.querySelector('#checkout-form').addEventListener('submit', async functi
     });
 
     if (response.ok) {
-      console.log('Order placed successfully!');
+      alert('Order placed successfully!');
     }
 
     // Clears the cart
     localStorage.removeItem('cart');
-    updateOrderSummary();
     window.location.href = 'index.html'; // Redirect to the homepage
   } catch (error) {
     console.error('Error placing order:', error);

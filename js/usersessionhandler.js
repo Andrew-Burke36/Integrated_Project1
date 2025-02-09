@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Update cart display in the shopping cart overlay
   function updateCartUI() {
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cart = JSON.parse(localStorage.getItem('cart'));
     const cartContainer = document.querySelector('.cart-container');
     
     cartContainer.innerHTML = '';
@@ -194,6 +194,7 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   // initialize page yes
+  loadProducts();
   isLogged();
   updateCartUI();
   updateCartIcon();
