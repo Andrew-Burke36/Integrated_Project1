@@ -42,8 +42,8 @@ Our project Acoustica, aimed to provide high quality guitars to consumers who ar
 ## Assistive AI 
 + **Chatgpt**
   1. Chatgpt helped with developing the dynamic system, where i needed a way to inject content into a container. But I didn't know how to do that, chatgpt helped me in this regard. Chatgpt also helped with clarifying doubts I had about what certain syntax's did, also helping check for any errors in my code and what were some best practices I should do to ensure good code that was robust, such as suggesting wrapping my code in a eventlistener to wait for the dom to load before running the script. Alongside sometimes the implementation of the API wasn't working at times, so I had to ask chatgpt for help to check if there were syntax issues which sometimes there were. Lastly, coming from python, there were certain logic that I already knew but didnt know how to write it equivalently into javascript, hence chatgpt helped me with converting some of the python code into javascript so the logic will work.
-![Chatgpthelp](Integrated_Project1/readme_img/Screenshot 2025-02-09 193546.png)
-![Chatgpthelp](Integrated_Project1/readme_img/Screenshot 2025-02-09 194751.png)
-![Chatgpthelp](Integrated_Project1/readme_img/Screenshot 2025-02-09 195026.png)
+![Chatgpthelp](https://github.com/Andrew-Burke36/Integrated_Project1/blob/main/readme_img/Screenshot%202025-02-09%20193546.png)
+![Chatgpthelp](https://github.com/Andrew-Burke36/Integrated_Project1/blob/main/readme_img/Screenshot%202025-02-09%20194751.png)
+![Chatgpthelp](https://github.com/Andrew-Burke36/Integrated_Project1/blob/main/readme_img/Screenshot%202025-02-09%20195026.png)
 
 ## Testing 
