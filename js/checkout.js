@@ -24,7 +24,7 @@ async function displayProducts() {
 }
 
 async function checkUser(userID) {
-  const apiKey = '67a1bf53c5f8d4c695e4d4f7';
+  const apiKey = '67a8b8d899fb601fa5e983eb';
   const databaseUrl = `https://integratedproject-feca.restdb.io/rest/customerinfo/${userID}`;
   
   try {
@@ -105,7 +105,7 @@ document.querySelector('#checkout-form').addEventListener('submit', async functi
   event.preventDefault();
 
   // pushes the order to the database
-  const apiKey = '67a1bf53c5f8d4c695e4d4f7';
+  const apiKey = '67a8b8d899fb601fa5e983eb';
   const customerOrderDB = `https://integratedproject-feca.restdb.io/rest/orderhistory`;
   const cart = JSON.parse(localStorage.getItem('cart')) || [];
   const date = new Date().toISOString();

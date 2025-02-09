@@ -62,6 +62,7 @@ come to Acoustica, they'll have access to many high quality guitars they can get
 ## Assistive AI 
 + **Chatgpt**
   1. Chatgpt helped with developing the dynamic system, where i needed a way to inject content into a container. But I didn't know how to do that, chatgpt helped me in this regard. Chatgpt also helped with clarifying doubts I had about what certain syntax's did, also helping check for any errors in my code and what were some best practices I should do to ensure good code that was robust, such as suggesting wrapping my code in a eventlistener to wait for the dom to load before running the script. Alongside sometimes the implementation of the API wasn't working at times, so I had to ask chatgpt for help to check if there were syntax issues which sometimes there were. Lastly, coming from python, there were certain logic that I already knew but didnt know how to write it equivalently into javascript, hence chatgpt helped me with converting some of the python code into javascript so the logic will work.
+
 **Dynamic injection system**
 ![Chatgpthelp](https://github.com/Andrew-Burke36/Integrated_Project1/blob/main/readme_img/Screenshot%202025-02-09%20193546.png)
 
@@ -75,15 +76,14 @@ come to Acoustica, they'll have access to many high quality guitars they can get
 **Mobile View**
   - For users on mobile, the site will be previewed in a one column format with the navigation bar being turnt into a burger icon that will be dropdown when clicked.
 
-![Mobile view]()
+![Mobile view](https://github.com/Andrew-Burke36/Integrated_Project1/blob/main/readme_img/Screenshot%202025-02-09%20205506.png)
 
 **For other platforms**
   - For all other platforms not mobile, will be similar in terms of preview, being similar to a desktop format with the content being shown in two or more columns in different rows and etc. With adjusted font-size, width and height for all contents.
 
-**Bugs**
+**Bugs not fixed**
 1. Database cannot handle more than 1 item when purchased. Hence causing the database only able to store one item from a checkout cart of a few items.
 2. When the script autoloads the user's information into the checkout, if the user hasn't updated their information to include payment method and etc, the script will fill it in with "undefined".
-3. 
 
 ## Credits
 **Media**
@@ -92,3 +92,12 @@ come to Acoustica, they'll have access to many high quality guitars they can get
 
 **Acknowledgements**
 - Acoustica's front-end inspiration was taken heavily from [Sweelee](https://www.sweelee.com.sg/).
+
+**Github link**
+[Github link](https://github.com/Andrew-Burke36/Integrated_Project1)
+
+**Contributions to Acoustica project**
+1. Andrew John Burke
+  - Main contributions to handle the backend system, using RestDB as the database and to use it to update the website dynamically. I helped do the front-end slightly when vonce could not do it at some part.
+2. Vonce Chew
+  - Main contributions was to do the front end, developing our mainframe and the UI/UX design, selecting the color palette for our website.

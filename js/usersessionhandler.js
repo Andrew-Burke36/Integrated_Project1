@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Function to retrieve products from API
   async function loadProducts() {
     const url = "https://integratedproject-feca.restdb.io/rest/products";
-    const apiKey = "67a1bf53c5f8d4c695e4d4f7";
+    const apiKey = "67a8b8d899fb601fa5e983eb";
     try {
       const response = await fetch(url, {
         method: "GET",
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Update cart display in the shopping cart overlay
   function updateCartUI() {
-    const cart = JSON.parse(localStorage.getItem('cart'));
+    const cart = JSON.parse(localStorage.getItem('cart'))  || [];
     const cartContainer = document.querySelector('.cart-container');
     
     cartContainer.innerHTML = '';

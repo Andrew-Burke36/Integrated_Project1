@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const street = document.getElementById("street").value;
       const city = document.getElementById("city").value;
       const postal = document.getElementById("postal").value;
-      const apiKey = "67a1bf53c5f8d4c695e4d4f7";
+      const apiKey = "67a8b8d899fb601fa5e983eb";
       const databaseUrl = `https://integratedproject-feca.restdb.io/rest/customerinfo/${userId}`;
 
       const updatedData = {
@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const card = document.getElementById("card").value;
       const cvv = document.getElementById("cvv").value;
       const month = document.getElementById("month").value;
-      const apiKey = "67a1bf53c5f8d4c695e4d4f7";
+      const apiKey = "67a8b8d899fb601fa5e983eb";
       const databaseUrl = `https://integratedproject-feca.restdb.io/rest/customerinfo/${userId}`;
 
       const updatedData = {
@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // loads the users orders into their order history
 async function OrderHistoryretrieve() {
-  const apiKey = "67a1bf53c5f8d4c695e4d4f7";
+  const apiKey = "67a8b8d899fb601fa5e983eb";
   const customerOrderDB = `https://integratedproject-feca.restdb.io/rest/orderhistory`;
 
   try {

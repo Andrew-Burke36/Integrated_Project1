@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', updateCartIcon);
 // Function to retrieve products from restDB
 async function loadProducts() {
   const url = "https://integratedproject-feca.restdb.io/rest/products";
-  const apiKey = "67a1bf53c5f8d4c695e4d4f7";
+  const apiKey = "67a8b8d899fb601fa5e983eb";
   try {
     const response = await fetch(url, {
       method: "GET",

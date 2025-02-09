@@ -7,7 +7,7 @@ document.getElementById("signup-form").onsubmit = function (event) {
         const password = document.getElementById("signup-password").value;
         const errorMessage = document.getElementById("signup-error-message");
     
-        const apiKey = "67a1bf53c5f8d4c695e4d4f7";
+        const apiKey = "67a8b8d899fb601fa5e983eb";
         const databaseURL = "https://integratedproject-feca.restdb.io/rest/customerinfo";
     
         if (!name || !email || !password) {
