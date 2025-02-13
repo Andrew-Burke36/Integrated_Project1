@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const phone = document.getElementById("phone").value;
       const email = document.getElementById("email").value;
       const password = document.getElementById("password").value;
-      const apiKey = "67a1bf53c5f8d4c695e4d4f7";
+      const apiKey = "67a8b8d899fb601fa5e983eb";
       const databaseUrl = `https://integratedproject-feca.restdb.io/rest/customerinfo/${userId}`;
 
       const updatedData = {
